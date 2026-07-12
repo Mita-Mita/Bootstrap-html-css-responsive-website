@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid align-items-center">
+    <a href="" class="h1 text-light text-decoration-none">Dewan ICT</a>
+    <button class="navbar-toggler" type="button" data-bs-target="#navnew" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navnew">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link text-light" target="_blank">Home</a></li>
+         <li class="nav-item"><a href="about.html" class="nav-link text-light" target="_blank">About</a></li>
+          <li class="nav-item"><a href="service.html" class="nav-link text-light" target="_blank">Service</a></li>
+           <li class="nav-item"><a href="gallery.html" class="nav-link text-light" target="_blank">Gallery</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link text-light" target="_blank">Contact</a></li>
+      </ul>
+      <button class="btn btn-danger"><a href="login.html" class="text-light text-decoration-none" >Login</a></button>
+    </div>
+  </div>
+</nav>
+
+<!--login-->
+
+
+
+ <section class="login-section">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow-lg login-card">
+                    <div class="row g-0">
+                        <!-- Left Image -->
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="login-image"></div>
+                        </div>
+                        <!-- Login Form -->
+                        <div class="col-lg-6">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-4 fw-bold">
+                                    Login
+                                </h2>
+                                <form id="loginForm">
+                                    <div class="mb-3">
+                                        <label class="form-label">Username</label>
+                                        <input type="text" id="username" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="password" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-danger w-100">  Login </button>
+                                </form>
+                                <p id="errorMsg" class="text-danger mt-3 text-center"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const validUsername = "admin";
+    const validPassword = "1234";
+
+    if(username === validUsername && password === validPassword){
+        window.location.href = "dashboard.html";
+    }else{
+        document.getElementById("errorMsg").innerHTML =
+        "❌ Invalid username or password!";
+    }
+});
+</script>
+
+
+<!--footer-->
+<footer class="footer bg-dark text-white pt-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Company -->
+            <div class="col-lg-4 col-md-6">
+                <h3 class="fw-bold mb-3">
+                    <i class="bi bi-globe"></i> Dewan ICT
+                </h3>
+
+                <p class="text-white-50">
+                    We provide Website Development, Domain Hosting,
+                    Digital Marketing, Graphic Design and Professional
+                    IT Training Services.
+                </p>
+
+                <div class="mt-4">
+                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="fw-bold mb-3">Quick Links</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="index.html" class=" text-light text-decoration-none">Home</a></li>
+
+                    <li><a href="about.html" class=" text-light text-decoration-none">About</a></li>
+
+                    <li><a href="courses.html" class=" text-light text-decoration-none">Courses</a></li>
+
+                    <li><a href="service.html" class=" text-light text-decoration-none">Services</a></li>
+
+                    <li><a href="contact.html" class=" text-light text-decoration-none">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="fw-bold mb-3">Services</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="#" class=" text-light text-decoration-none" >Web Development</a></li>
+
+                    <li><a href="#" class=" text-light text-decoration-none">Graphic Design</a></li>
+
+                    <li><a href="#" class=" text-light text-decoration-none">SEO</a></li>
+
+                    <li><a href="#" class=" text-light text-decoration-none">Domain & Hosting</a></li>
+
+                    <li><a href="#" class=" text-light text-decoration-none">Digital Marketing</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="fw-bold mb-3">Contact</h5>
+
+                <p>
+                    <i class="bi bi-geo-alt-fill text-warning"></i>
+                    Mirpur-1, Dhaka
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope-fill text-warning"></i>
+                    info@example.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone-fill text-warning"></i>
+                01609560772
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="text-center pb-3">
+
+            <p class="mb-0 text-white-50">
+                © 2026 Dewan ICT Institute. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
